@@ -14,8 +14,8 @@
 "     :%@t%8   88.  .  .  :: . ..   .   .          .   . ..  .      ..   .    .       . . ... .   . .   .        ..
 "      .. 8888   ..      ...   . .    .   .  . .     .   ..    .  .    .        .   .   . ..    .  .  .   .  . .     ....
 "
-" Author: chxuan <787280310@qq.com>
-" Repository: https://github.com/chxuan/vimplus
+" Author: Moshes Abraham <yoshissac6@gmail.com>
+" Repository: https://github.com/Moshes-Abraham/vimrc
 " Create Date: 2016-04-10
 " License: MIT
 
