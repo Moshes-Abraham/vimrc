@@ -1,1 +1,0 @@
-/home/moshes-abraham/.config/nvim/init.vim
