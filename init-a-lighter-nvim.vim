@@ -45,14 +45,14 @@ nnoremap <c-l> <c-w>l
 nnoremap \ :vsplit<CR>
 nnoremap - :split<CR>
 
-nmap `o o<esc>k "向下新增一行
-nmap `i <S-o><esc>j "向上新增一行
+nnoremap `o o<esc>k "向下新增一行
+nnoremap `i <S-o><esc>j "向上新增一行
 
-nmap `t :terminal<CR>
+nnoremap `t :terminal<CR>
 tnoremap <Esc> <C-\><C-n>
 
-nmap `p :echo expand("%:p")<CR>
-nmap `q gg^vG$d
+nnoremap `p :echo expand("%:p")<CR>
+nnoremap `q gg^vG$d
 
 nnoremap <leader>c :setlocal spell!<CR>
 
