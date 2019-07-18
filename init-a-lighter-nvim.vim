@@ -42,6 +42,11 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
+nnoremap w= :resize +3<CR>
+nnoremap w- :resize -3<CR>
+nnoremap w, :vertical resize -3<CR>
+nnoremap w. :vertical resize +3<CR>
+
 nnoremap \ :vsplit<CR>
 nnoremap - :split<CR>
 
