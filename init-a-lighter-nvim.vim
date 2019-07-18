@@ -42,8 +42,8 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-nmap \ :vsplit<CR>
-nmap - :split<CR>
+nnoremap \ :vsplit<CR>
+nnoremap - :split<CR>
 
 nmap `o o<esc>k "向下新增一行
 nmap `i <S-o><esc>j "向上新增一行
