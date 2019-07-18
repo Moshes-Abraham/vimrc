@@ -21,6 +21,8 @@ set vb t_vb=
 set ignorecase
 set autoread
 set scrolloff=3
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn','\%81v',100)
 syntax off
 filetype on
 filetype plugin indent on
@@ -42,10 +44,10 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-nnoremap w= :resize +3<CR>
-nnoremap w- :resize -3<CR>
-nnoremap w, :vertical resize -3<CR>
-nnoremap w. :vertical resize +3<CR>
+nnoremap t= :resize +3<CR>
+nnoremap t- :resize -3<CR>
+nnoremap t, :vertical resize -3<CR>
+nnoremap t. :vertical resize +3<CR>
 
 nnoremap \ :vsplit<CR>
 nnoremap - :split<CR>
