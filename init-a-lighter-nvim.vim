@@ -1,3 +1,4 @@
+
 """ Tips
 "	 1) Hit Q (<shift>q) to enter Ex mode;
 "	 2) Hit `t to open a terminal. Hit i to enter the terminal and hit <Esc> to
@@ -21,9 +22,9 @@ set vb t_vb=
 set ignorecase
 set autoread
 set scrolloff=3
-highlight ColorColumn ctermbg=magenta
-call matchadd('ColorColumn','\%81v',100)
-syntax off
+"highlight ColorColumn ctermbg=magenta
+"call matchadd('ColorColumn','\%81v',100)
+syntax on
 filetype on
 filetype plugin indent on
 "nmap s :w<CR>
@@ -33,6 +34,8 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'vim-scripts/indentpython.vim'
+Plug 'chxuan/tagbar'
 call plug#end()
 
 """ Maps
@@ -49,11 +52,11 @@ nnoremap t- :resize -3<CR>
 nnoremap t, :vertical resize -3<CR>
 nnoremap t. :vertical resize +3<CR>
 
-nnoremap \ :vsplit<CR>
-nnoremap - :split<CR>
+nnoremap \ :vsplit<CR><c-w>l
+nnoremap - :split<CR><c-w>j
 
-nnoremap `o o<esc>k "向下新增一行
-nnoremap `i <S-o><esc>j "向上新增一行
+nnoremap `o o<esc>k 
+nnoremap `i <S-o><esc>j 
 
 nnoremap `t :terminal<CR>
 tnoremap <Esc> <C-\><C-n>
@@ -71,6 +74,11 @@ let g:NERDTreeHighlightFolders = 1
 let g:NERDTreeHighlightFoldersFullName = 1
 let g:NERDTreeDirArrowExpandable='▷'
 let g:NERDTreeDirArrowCollapsible='▼'
+
+
+" tagbar
+let g:tagbar_width = 30
+nnoremap <silent> <leader>t :TagbarToggle<cr>
 
 
 nnoremap <silent> <leader>b :call CompileRun()<CR>
@@ -92,3 +100,19 @@ func! CompileRun()
     endif
 endfunc
 
+nnoremap <leader>m :call MaximizeWindow()<CR>
+function! MaximizeWindow()
+	" Check if the zoomed state (tabnumber > 1 && window == 1)
+	if tabpagenr('$') > 1 && tabpagewinnr(tabpagenr(),'$') == 1
+		let l:cur_winview = winsaveview()
+		let l:cur_bufname = bufname('')	
+		tabclose
+
+		" restore the view
+		if l:cur_bufname == bufname('')
+			call winrestview(cur_winview)
+		endif
+	else
+		tab split
+	endif
+endfunction
