@@ -1,0 +1,11 @@
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free
+deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ buster main non-free contrib
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free
+deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main non-free contrib
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free
+deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free
+deb https://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free
+deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free
+
+
+deb http://httpredir.debian.org/debian jessie main contrib non-free
