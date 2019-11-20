@@ -37,6 +37,8 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'chxuan/tagbar'
+Plug 'vim-scripts/fcitx.vim'
+Plug 'ybian/smartim'
 call plug#end()
 
 """ Ctags
@@ -91,17 +93,17 @@ nnoremap <silent> <leader>b :call CompileRun()<CR>
 func! CompileRun()
     exec "w"
     if &filetype == 'c'
-        exec "!clang % -o %<"
+        exec "!clang-8 % -o %<"
         exec "!time ./%<"
     elseif &filetype == 'cpp'
-        exec "!clang++ % -o %<"
+        exec "!clang++-8 % -o %<"
         exec "!time ./%<"
     elseif &filetype == 'sh'
         :!time bash %
     elseif &filetype == 'python'
         exec "!time python%"
     elseif &filetype == 'go'
-        exec "!go build %<"
+        exec "!go-9.1 build %<"
         exec "!time go run %"
     endif
 endfunc
