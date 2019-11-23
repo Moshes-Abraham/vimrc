@@ -152,11 +152,13 @@ alias gst='gnome-screenshot'
 alias smm='sudo dmidecode -t memory'
 alias rstld='sudo systemctl restart lightdm.service'
 # alias rstld='sudo pkill Xorg'
+alias kxg='sudo init 3'
 alias sbc='source ~/.bashrc'
 alias gcf='sudo update-alternatives --config gcc'
 alias tgui='sudo init 5'
 alias wicd='wicd-gtk'
-alias brc='vro ~/.bashrc'
+alias ebc='vro ~/.bashrc'
+alias game='sh /home/moshes/src/shell/game.sh'
 
 mount_usb()
 {
